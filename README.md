@@ -1,20 +1,17 @@
-# EntrevistAIdor
-Buscar trabajo es un trabajo y conseguir entrevistas es difícil, entonces queremos estar preparados para cuando llegue el momento. Para eso, vamos a crear nuestro propio bot entrevistAIdor.
+# Asistente de IA de rol configurable
+Aplicación web desarrollada utilizando TypeScript, React.js y Tailwind. Consta de un asistente de rol y alcance configurable basado en el modelo llama3; pensado originalmente para servir como "mesa de ayuda" en establecimientos de cualquier tipo.
 
-### Requisitos
-- Ver un botón en el medio de la pantalla que al clickearlo, nos permita grabar un mensaje y al clickearlo devuelta, deje de grabar y envíe ese mensaje al entrevistAIdor.
-- Luego de enviar el mensaje, el entrevistAIdor nos debería contestar con voz.
-- Al clickear el botón mientras el entrevistAIdor está hablando, debería interrumpirlo y comenzar a grabar nuestro mensaje.
+# Instalación y uso
+Para instalar y correr el proyecto en tu entorno local deberás seguir los siguientes pasos:
+1. Clonar este reporsitorio
+```git clone https://github.com/ignaciomercado4/ai-chat.git```
 
-## Extras
-- Permitir al usuario escribir mensajes en vez de grabarlos.
-- Mostrar el historial de mensajes enviados y recibidos.
-- En vez de tener un botón en el centro para grabar, detectar cuando se está hablando y grabar automáticamente, enviar el mensaje cuando se deje de hablar e interrumpir al entrevistAIdor si se detecta que estamos hablando.
-- Permitir que el usuario pueda elegir entre distintos entrevistAIdores. Tanto de tema como de voz.
+2. Instalar los paquetes (se recomienda utilizar pnpm) 
+```pnpm install```
 
-## Recomendaciones
-- Podés usar [Ollama](https://ollama.com/) y su API REST para obtener las respuestas del entrevistAIdor. El modelo `llama3` funciona bastante bien.
-- Podés usar [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) para convertir audio a texto y texto a audio.
-- Si usas Microsoft Edge, las voces del sintetizador son (más y) mucho mejores.
+3. Instalar ollama en su última versión [disponible aquí](https://ollama.com/).
+4. Descargar el modelo llama3 [disponible aquí](https://www.llama.com/models/llama-3/).
+5. Levantar el proyecto
+```pnpm dev```
 
-Podés clonarlo o usarlo directamentes desde [CodeSandbox](https://codesandbox.io/s/github/goncy/interview-challenges/tree/main/proyectos-take-home/entrevistaidor)
+
