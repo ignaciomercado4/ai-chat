@@ -14,4 +14,5 @@ Para instalar y correr el proyecto en tu entorno local deberás seguir los sigui
 5. Levantar el proyecto
 ```pnpm dev```
 
+Se utilizó como quickstart el siguiente [repositorio](https://github.com/goncy/interview-challenges).
 

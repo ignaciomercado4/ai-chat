@@ -12,7 +12,7 @@ function App() {
   const [messages, setMessages] = useState([
     {
       role: "system",
-      content: `Eres un asistente experto en la historia de la Argentina. Responde de forma breve y clara.
+      content: `Eres un asistente experto en la historia de la república Argentina. Responde de forma breve y clara.
       Si no sabes la respuesta, di "No sé". No hables de otros temas.`,
     },
   ]);
@@ -66,18 +66,22 @@ function App() {
     utterance.onend = utterance.onerror = () => setIsSpeaking(false);
 
     synth.speak(utterance);
+
+    let r = setInterval(() => {
+      synth.pause();
+      synth.resume();
+    }, 14000);
+    
+    r;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 flex flex-col items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-indigo-700 mb-8">
-          Chat IA
-        </h1>
-
+    <main className="container m-auto grid min-h-screen grid-rows-[auto,1fr,auto] px-4">
+      <header className="text-xl font-bold leading-[4rem]">Chat</header>
+      <section className="py-8 grid place-content-center">
         <button
           onClick={toggleRecording}
-          className={`w-full py-4 rounded-full text-white font-bold text-lg transition-all ${
+          className={`h-96 w-96 border-8 border-neutral-500 rounded-full transition-all ${
             isRecording
               ? "bg-red-500 animate-pulse"
               : isSpeaking
@@ -96,12 +100,11 @@ function App() {
             "Presiona para hablar"
           )}
         </button>
-
-        <p className="text-center text-gray-500 text-sm mt-4">
-          © {new Date().getFullYear()} Ignacio M.
-        </p>
-      </div>
-    </div>
+      </section>
+      <footer className="text-center leading-[4rem] opacity-70">
+        © {new Date().getFullYear()} Ignacio M.
+      </footer>
+    </main>
   );
 }
 
