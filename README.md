@@ -14,5 +14,10 @@ Para instalar y correr el proyecto en tu entorno local deberás seguir los sigui
 5. Levantar el proyecto
 ```pnpm dev```
 
+# Interfaz de Usuario
+![ai2](https://github.com/user-attachments/assets/0354f361-2ee9-4b9b-b95c-a1d13cee4fea)
+![ai1](https://github.com/user-attachments/assets/a3c025b5-db58-4bfd-acd3-01c174324b09)
+
+
 Se utilizó como quickstart el siguiente [repositorio](https://github.com/goncy/interview-challenges).
 
